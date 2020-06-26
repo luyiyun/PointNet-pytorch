@@ -1,0 +1,34 @@
+{
+    "seed": 1234,
+    "data": {
+        "dir": "/home/stat-luyiyun/Datasets/ModelNet40/ModelNet10",
+        "npoints": 1024,
+        "sample_method": "farthest",
+        "jitter_std": 0.01,
+        "jitter_clip": 0.05
+    },
+    "model": {
+        "reg_w": 0.001,
+        "stn3": {
+            "p2p_hiddens": [64, 128, 1024],
+            "fc_hiddens": [1024, 512, 256]
+        },
+        "stnk": {
+            "p2p_hiddens": [64, 128, 1024],
+            "fc_hiddens": [1024, 512, 256]
+        },
+        "pointnet": {
+            "first_conv": 64,
+            "p2p_hiddens": [64, 128, 1024],
+            "fc_hiddens": [1024, 512, 256]
+        }
+    },
+    "train": {
+        "name": null,
+        "epoch": 100,
+        "lr": 0.001,
+        "batch_size": 256,
+        "njobs": 4,
+        "device": "cuda:0"
+    }
+}
